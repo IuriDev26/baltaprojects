@@ -1,0 +1,15 @@
+C:\Users\ESTAGIARIOTI\Documents\baltaprojects\Stopwatch\bin\Debug\net8.0\Stopwatch.exe
+C:\Users\ESTAGIARIOTI\Documents\baltaprojects\Stopwatch\bin\Debug\net8.0\Stopwatch.deps.json
+C:\Users\ESTAGIARIOTI\Documents\baltaprojects\Stopwatch\bin\Debug\net8.0\Stopwatch.runtimeconfig.json
+C:\Users\ESTAGIARIOTI\Documents\baltaprojects\Stopwatch\bin\Debug\net8.0\Stopwatch.dll
+C:\Users\ESTAGIARIOTI\Documents\baltaprojects\Stopwatch\bin\Debug\net8.0\Stopwatch.pdb
+C:\Users\ESTAGIARIOTI\Documents\baltaprojects\Stopwatch\obj\Debug\net8.0\Stopwatch.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ESTAGIARIOTI\Documents\baltaprojects\Stopwatch\obj\Debug\net8.0\Stopwatch.AssemblyInfoInputs.cache
+C:\Users\ESTAGIARIOTI\Documents\baltaprojects\Stopwatch\obj\Debug\net8.0\Stopwatch.AssemblyInfo.cs
+C:\Users\ESTAGIARIOTI\Documents\baltaprojects\Stopwatch\obj\Debug\net8.0\Stopwatch.csproj.CoreCompileInputs.cache
+C:\Users\ESTAGIARIOTI\Documents\baltaprojects\Stopwatch\obj\Debug\net8.0\Stopwatch.sourcelink.json
+C:\Users\ESTAGIARIOTI\Documents\baltaprojects\Stopwatch\obj\Debug\net8.0\Stopwatch.dll
+C:\Users\ESTAGIARIOTI\Documents\baltaprojects\Stopwatch\obj\Debug\net8.0\refint\Stopwatch.dll
+C:\Users\ESTAGIARIOTI\Documents\baltaprojects\Stopwatch\obj\Debug\net8.0\Stopwatch.pdb
+C:\Users\ESTAGIARIOTI\Documents\baltaprojects\Stopwatch\obj\Debug\net8.0\Stopwatch.genruntimeconfig.cache
+C:\Users\ESTAGIARIOTI\Documents\baltaprojects\Stopwatch\obj\Debug\net8.0\ref\Stopwatch.dll
