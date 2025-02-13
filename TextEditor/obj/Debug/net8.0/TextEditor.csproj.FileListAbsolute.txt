@@ -1,0 +1,15 @@
+/home/iuridev26/Development/Learning/.NET/baltaprojects/TextEditor/bin/Debug/net8.0/TextEditor
+/home/iuridev26/Development/Learning/.NET/baltaprojects/TextEditor/bin/Debug/net8.0/TextEditor.deps.json
+/home/iuridev26/Development/Learning/.NET/baltaprojects/TextEditor/bin/Debug/net8.0/TextEditor.runtimeconfig.json
+/home/iuridev26/Development/Learning/.NET/baltaprojects/TextEditor/bin/Debug/net8.0/TextEditor.dll
+/home/iuridev26/Development/Learning/.NET/baltaprojects/TextEditor/bin/Debug/net8.0/TextEditor.pdb
+/home/iuridev26/Development/Learning/.NET/baltaprojects/TextEditor/obj/Debug/net8.0/TextEditor.GeneratedMSBuildEditorConfig.editorconfig
+/home/iuridev26/Development/Learning/.NET/baltaprojects/TextEditor/obj/Debug/net8.0/TextEditor.AssemblyInfoInputs.cache
+/home/iuridev26/Development/Learning/.NET/baltaprojects/TextEditor/obj/Debug/net8.0/TextEditor.AssemblyInfo.cs
+/home/iuridev26/Development/Learning/.NET/baltaprojects/TextEditor/obj/Debug/net8.0/TextEditor.csproj.CoreCompileInputs.cache
+/home/iuridev26/Development/Learning/.NET/baltaprojects/TextEditor/obj/Debug/net8.0/TextEditor.sourcelink.json
+/home/iuridev26/Development/Learning/.NET/baltaprojects/TextEditor/obj/Debug/net8.0/TextEditor.dll
+/home/iuridev26/Development/Learning/.NET/baltaprojects/TextEditor/obj/Debug/net8.0/refint/TextEditor.dll
+/home/iuridev26/Development/Learning/.NET/baltaprojects/TextEditor/obj/Debug/net8.0/TextEditor.pdb
+/home/iuridev26/Development/Learning/.NET/baltaprojects/TextEditor/obj/Debug/net8.0/TextEditor.genruntimeconfig.cache
+/home/iuridev26/Development/Learning/.NET/baltaprojects/TextEditor/obj/Debug/net8.0/ref/TextEditor.dll
