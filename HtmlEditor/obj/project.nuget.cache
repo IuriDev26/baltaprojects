@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "dex3n1Pa0QAYEvjeemZmcOrWPVyatGDYM3fVL9qB3T3ks/U8ZIDW5Fm0Ophn2ZNCJGh6efRoiio+uYnk8OMmCg==",
+  "success": true,
+  "projectFilePath": "/home/iuridev26/Development/Learning/.NET/baltaprojects/HtmlEditor/HtmlEditor.csproj",
+  "expectedPackageFiles": [
+    "/home/iuridev26/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.12/microsoft.aspnetcore.app.ref.8.0.12.nupkg.sha512"
+  ],
+  "logs": []
+}

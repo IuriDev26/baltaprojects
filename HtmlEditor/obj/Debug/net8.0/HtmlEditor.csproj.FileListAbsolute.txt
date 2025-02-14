@@ -1,0 +1,15 @@
+/home/iuridev26/Development/Learning/.NET/baltaprojects/HtmlEditor/bin/Debug/net8.0/HtmlEditor
+/home/iuridev26/Development/Learning/.NET/baltaprojects/HtmlEditor/bin/Debug/net8.0/HtmlEditor.deps.json
+/home/iuridev26/Development/Learning/.NET/baltaprojects/HtmlEditor/bin/Debug/net8.0/HtmlEditor.runtimeconfig.json
+/home/iuridev26/Development/Learning/.NET/baltaprojects/HtmlEditor/bin/Debug/net8.0/HtmlEditor.dll
+/home/iuridev26/Development/Learning/.NET/baltaprojects/HtmlEditor/bin/Debug/net8.0/HtmlEditor.pdb
+/home/iuridev26/Development/Learning/.NET/baltaprojects/HtmlEditor/obj/Debug/net8.0/HtmlEditor.GeneratedMSBuildEditorConfig.editorconfig
+/home/iuridev26/Development/Learning/.NET/baltaprojects/HtmlEditor/obj/Debug/net8.0/HtmlEditor.AssemblyInfoInputs.cache
+/home/iuridev26/Development/Learning/.NET/baltaprojects/HtmlEditor/obj/Debug/net8.0/HtmlEditor.AssemblyInfo.cs
+/home/iuridev26/Development/Learning/.NET/baltaprojects/HtmlEditor/obj/Debug/net8.0/HtmlEditor.csproj.CoreCompileInputs.cache
+/home/iuridev26/Development/Learning/.NET/baltaprojects/HtmlEditor/obj/Debug/net8.0/HtmlEditor.sourcelink.json
+/home/iuridev26/Development/Learning/.NET/baltaprojects/HtmlEditor/obj/Debug/net8.0/HtmlEditor.dll
+/home/iuridev26/Development/Learning/.NET/baltaprojects/HtmlEditor/obj/Debug/net8.0/refint/HtmlEditor.dll
+/home/iuridev26/Development/Learning/.NET/baltaprojects/HtmlEditor/obj/Debug/net8.0/HtmlEditor.pdb
+/home/iuridev26/Development/Learning/.NET/baltaprojects/HtmlEditor/obj/Debug/net8.0/HtmlEditor.genruntimeconfig.cache
+/home/iuridev26/Development/Learning/.NET/baltaprojects/HtmlEditor/obj/Debug/net8.0/ref/HtmlEditor.dll
