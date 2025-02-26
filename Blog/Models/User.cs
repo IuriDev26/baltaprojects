@@ -8,6 +8,7 @@ public class User
     public User()
     {
         Roles = new List<Role>();
+        Posts = new List<Post>();
     }
     
     public int Id { get; set; }
@@ -18,6 +19,7 @@ public class User
     public string Image { get; set; }
     public string Slug { get; set; }
     
-    [Write(false)]
     public List<Role> Roles { get; set; }
+    public List<Post> Posts { get; set; }
+    
 }
