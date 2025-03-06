@@ -1,23 +1,38 @@
-﻿
+using System.Text;
+using Blog;
+using Blog.Data;
+using Blog.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 
-using Blog.Models;
-using Blog.Repositories;
-using Blog.Views;
-using Dapper.Contrib.Extensions;
-using Microsoft.Data.SqlClient;
+var builder = WebApplication.CreateBuilder(args);
 
-namespace Blog
+builder.Services.AddControllers().ConfigureApiBehaviorOptions(
+    (options) => options.SuppressModelStateInvalidFilter = true
+    );
+builder.Services.AddDbContext<BlogDataContext>();
+builder.Services.AddTransient<TokenService>();
+
+var key = Encoding.ASCII.GetBytes(Configuration.JwtKey);
+builder.Services.AddAuthentication(x =>
 {
-    class Program
+    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(x =>
+{
+    x.TokenValidationParameters = new TokenValidationParameters()
     {
-        private const string ConnectionString = "Server=localhost;Database=Blog;User Id=sa;Password=Iuricrbtyuio123@#;TrustServerCertificate=True;";
-        static void Main(string[] args)
-        {
-            using var connection = new SqlConnection(ConnectionString);
-            connection.Open(); 
-            var menu = new UserView(connection);
-            menu.Menu();
-            connection.Open();
-        }
-    }
-}
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(key),
+        ValidateIssuer = false,
+        ValidateAudience = false
+    };
+});
+
+var app = builder.Build();
+
+app.MapControllers();
+app.UseAuthentication();
+app.UseAuthorization();
+
+app.Run();

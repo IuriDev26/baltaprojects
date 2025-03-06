@@ -1,9 +1,13 @@
-namespace Blog.Models;
+using System.Collections.Generic;
 
-public class Tag
+namespace Blog.Models
 {
-    public int Id { get; set; }
-    public string Name { get; set; }
-    public string Slug { get; set; }
-    public List<Post> Posts { get; set; }
+    public class Tag
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Slug { get; set; }
+
+        public List<Post> Posts { get; set; }
+    }
 }
