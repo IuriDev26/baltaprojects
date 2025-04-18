@@ -1,0 +1,65 @@
+{
+  "Files": [
+    {
+      "Id": "/home/iuridev26/Development/Learning/.NET/baltaprojects/MyRazorPages/wwwroot/css/styles.css",
+      "PackagePath": "staticwebassets/css/styles.css"
+    },
+    {
+      "Id": "/home/iuridev26/Development/Learning/.NET/baltaprojects/MyRazorPages/wwwroot/imgs/cama.jpg",
+      "PackagePath": "staticwebassets/imgs/cama.jpg"
+    },
+    {
+      "Id": "/home/iuridev26/Development/Learning/.NET/baltaprojects/MyRazorPages/wwwroot/imgs/home-white.png",
+      "PackagePath": "staticwebassets/imgs/home-white.png"
+    },
+    {
+      "Id": "/home/iuridev26/Development/Learning/.NET/baltaprojects/MyRazorPages/wwwroot/imgs/home.png",
+      "PackagePath": "staticwebassets/imgs/home.png"
+    },
+    {
+      "Id": "/home/iuridev26/Development/Learning/.NET/baltaprojects/MyRazorPages/wwwroot/imgs/logout-white.png",
+      "PackagePath": "staticwebassets/imgs/logout-white.png"
+    },
+    {
+      "Id": "/home/iuridev26/Development/Learning/.NET/baltaprojects/MyRazorPages/wwwroot/imgs/logout.png",
+      "PackagePath": "staticwebassets/imgs/logout.png"
+    },
+    {
+      "Id": "/home/iuridev26/Development/Learning/.NET/baltaprojects/MyRazorPages/wwwroot/imgs/lupa.png",
+      "PackagePath": "staticwebassets/imgs/lupa.png"
+    },
+    {
+      "Id": "/home/iuridev26/Development/Learning/.NET/baltaprojects/MyRazorPages/wwwroot/imgs/purchase-white.png",
+      "PackagePath": "staticwebassets/imgs/purchase-white.png"
+    },
+    {
+      "Id": "/home/iuridev26/Development/Learning/.NET/baltaprojects/MyRazorPages/wwwroot/imgs/purchase.png",
+      "PackagePath": "staticwebassets/imgs/purchase.png"
+    },
+    {
+      "Id": "/home/iuridev26/Development/Learning/.NET/baltaprojects/MyRazorPages/wwwroot/imgs/user-white.png",
+      "PackagePath": "staticwebassets/imgs/user-white.png"
+    },
+    {
+      "Id": "/home/iuridev26/Development/Learning/.NET/baltaprojects/MyRazorPages/wwwroot/imgs/user.png",
+      "PackagePath": "staticwebassets/imgs/user.png"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.MyRazorPages.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.MyRazorPages.props",
+      "PackagePath": "build\\MyRazorPages.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.MyRazorPages.props",
+      "PackagePath": "buildMultiTargeting\\MyRazorPages.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.MyRazorPages.props",
+      "PackagePath": "buildTransitive\\MyRazorPages.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

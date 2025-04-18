@@ -1,0 +1,126 @@
+@page
+@using System.Data
+@using Microsoft.AspNetCore.Http.Features
+@model MyRazorPages.Pages.Index
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Portal do Cliente Guido</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head> 
+<body>
+<main>
+    <div class="menu_lateral">
+        <div class="user_icon" id="userWrapper">
+            <img src="imgs/user.png" alt="" class="icon" id="userImg">
+            <span id="username">Meu nome</span>
+        </div>
+        <ul class="nav">
+            <li class="nav-item">
+                <img src="imgs/home.png" alt="" class="icon">
+                <span class="menu_item">Meus Dados</span>
+            </li>
+            <li class="nav-item">
+                <img src="imgs/purchase.png" alt=""class="icon">
+                <span class="menu_item">Minhas Compras</span>
+            </li >
+            <li class="nav-item" id="logout">
+                <img src="imgs/logout.png" alt=""class="icon">
+                <span class="menu_item">Sair</span>
+            </li>
+        </ul>
+    </div>
+    <div class="main_container">
+        <div class="purchases_dashboard">
+            <div class="purchases_dashboard_titulo">
+                <h1>Resumo</h1>
+            </div>
+            <div class="purchase_status_wrapper">
+                <div class="purchase_status">
+                    <h1>12</h1>
+                    <p>Total</p>
+                </div>
+                <div class="purchase_status">
+                    <h1>12</h1>
+                    <p>Em Andamento</p>
+                </div>
+                <div class="purchase_status">
+                    <h1>12</h1>
+                    <p>Finalizadas</p>
+                </div>
+            </div>
+        </div>
+        <div class="search">
+            <div class="search_bar">
+                <form action="">
+                    <div class="search_wrapper">
+                        <img src="imgs/lupa.png" alt="" id="lupa_search" width="24px" height="24px">
+                        <input type="text" name="search" id="search" placeholder="Pesquise aqui o produto que você comprou">
+                    </div>
+                    <div class="form_button"><button type="submit">Pesquisar</button></div>
+                </form>
+            </div>
+        </div>
+        <div class="purchases_list">
+            <ul>
+                <li class="purchases_list_item">
+                    <h1>Pedido 123456</h1>
+                    <div class="product_info">
+                        <img src="imgs/cama.jpg" alt="" class="product_image" width="150px" height="150px">
+                        <div class="product_detail">
+                            <ul>
+                                <li class="product_title">Cama Unibox Casal</li>
+                                <li>Preço Unitário: R$ 1.000,00</li>
+                                <li>Quantidade: 2 UN</li>
+                                <li>Total: R$ 2.000,00</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+</body>
+<script>
+    const img = document.getElementById('userImg')
+    const imgWrapper = document.getElementById('userWrapper')
+    const navItem = document.getElementsByClassName('nav-item')
+    
+    imgWrapper.addEventListener('mouseenter', () => {
+        img.src = 'imgs/user-white.png'
+    })
+
+    imgWrapper.addEventListener('mouseleave', () => {
+        img.src = 'imgs/user.png'
+    })
+
+    const hoverImages = {
+        'home.png': 'home-white.png',
+        'purchase.png': 'purchase-white.png',
+        'logout.png': 'logout-white.png'
+    };
+
+    const navItems = document.querySelectorAll('.nav-item');
+
+    navItems.forEach(item => {
+        const img = item.querySelector('img');
+        const originalSrc = img.getAttribute('src');
+        const imgName = originalSrc.split('/').pop(); // ex: "home.png"
+
+        item.addEventListener('mouseenter', () => {
+            if (hoverImages[imgName]) {
+                img.src = originalSrc.replace(imgName, hoverImages[imgName]);
+            }
+        });
+
+        item.addEventListener('mouseleave', () => {
+            img.src = originalSrc;
+        });
+    });
+
+    
+</script>
+</html>

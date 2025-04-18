@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "VgxeH3b+uhE=",
+  "success": true,
+  "projectFilePath": "/home/iuridev26/Development/Learning/.NET/baltaprojects/MyRazorPages/MyRazorPages.csproj",
+  "expectedPackageFiles": [
+    "/home/iuridev26/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.14/microsoft.aspnetcore.app.ref.8.0.14.nupkg.sha512"
+  ],
+  "logs": []
+}

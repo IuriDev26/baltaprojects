@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "juL+cuXnkXw=",
+  "success": true,
+  "projectFilePath": "/home/iuridev26/Development/Learning/.NET/baltaprojects/MinhaApi/MinhaApi.csproj",
+  "expectedPackageFiles": [
+    "/home/iuridev26/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.12/microsoft.aspnetcore.app.ref.8.0.12.nupkg.sha512"
+  ],
+  "logs": []
+}
