@@ -1,0 +1,63 @@
+@page "/products/create"
+@using Microsoft.EntityFrameworkCore
+@using Shop.Data
+@using Shop.Models
+@inject AppDbContext Context
+@inject NavigationManager Navigator
+<h1>New Product</h1>
+
+<EditForm Model="@Product" OnValidSubmit="Submit">
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
+
+    <div class="mb-3">
+        <label for="Description" class="form-label">Description</label>
+        <InputText @bind-Value="@Product.Description" class="form-control" id="Description"></InputText>
+    </div>
+
+    <div class="mb-3">
+        <label for="Price" class="form-label">Price</label>
+        <InputNumber @bind-Value="@Product.Price" class="form-control" id="Price"></InputNumber>
+    </div>
+
+    <div class="mb-3">
+        <label for="CategoryId" class="form-label">Category</label>
+        <InputSelect @bind-Value="@Product.CategoryId" class="form-control" id="CategoryId">
+            @foreach (var category in Categories)
+            {
+                <option value="@category.Id">@category.Name</option>
+
+            }
+        </InputSelect>
+    </div>
+    
+    <button class="btn btn-success" type="submit">Save</button>
+
+</EditForm>
+
+
+@code {
+    public Product Product { get; set; } = new();
+
+    public List<Category> Categories { get; set; } = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        Categories = await Context.Categories.AsNoTracking().ToListAsync();
+        Product.CategoryId = Categories[0].Id;
+    }
+
+    public async Task Submit()
+    {
+        try
+        {
+            await Context.Products.AddAsync(Product);
+            await Context.SaveChangesAsync();
+            Navigator.NavigateTo("/products");
+        }
+        catch (Exception ex)
+        {
+            Navigator.NavigateTo("/Error");
+        }
+    }
+}

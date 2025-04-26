@@ -1,0 +1,41 @@
+@page "/categories"
+@using Shop.Models
+
+<h1>Categories</h1>
+
+<a href="categories/create" class="btn btn-primary">
+    <i class="oi oi-plus"> </i>
+    New Category
+</a>
+
+<table class="table">
+    <thead>
+    <th>Id</th>
+    <th>Nome</th>
+    <th>Editar</th>
+    <th>Deletar</th>
+    </thead>
+    <tbody>
+    @foreach (var category in Categories)
+    {
+        <tr>
+            <td>@category.Id</td>
+            <td>@category.Name</td>
+            <td><a href="categories/update/@category.Id"><i class="oi oi-pencil"></i></a></td>
+            <td><a href="categories/delete/@category.Id"><i class="oi oi-delete"></i></a></td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+
+@code {
+
+    public List<Category> Categories { get; set; } = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        Categories.AddRange(await Context.Categories.AsNoTracking().ToListAsync());
+    }
+
+}

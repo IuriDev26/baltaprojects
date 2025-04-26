@@ -1,0 +1,83 @@
+@page "/products/delete/{id:int}"
+<h1>Delete Product</h1>
+
+<EditForm Model="@Product" OnValidSubmit="Submit">
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
+    
+    @if (!string.IsNullOrEmpty(ErrorMessages))
+    {
+        <div class="alert alert-danger">@ErrorMessages</div>
+    }
+
+    <div class="mb-3">
+        <label for="Description" class="form-label">Description</label>
+        <InputText readonly @bind-Value="@Product.Description" class="form-control" id="Description"></InputText>
+    </div>
+
+    <div class="mb-3">
+        <label for="Price" class="form-label">Price</label>
+        <InputNumber readonly @bind-Value="@Product.Price" class="form-control" id="Price"></InputNumber>
+    </div>
+
+    <div class="mb-3">
+        <label for="CategoryId" class="form-label">Category</label>
+        <InputSelect readonly @bind-Value="@Product.CategoryId" class="form-control" id="CategoryId">
+            @foreach (var category in Categories)
+            {
+                <option value="@category.Id">@category.Name</option>
+
+            }
+        </InputSelect>
+    </div>
+
+    <button class="btn btn-danger" type="submit">Delete</button>
+
+</EditForm>
+
+@code {
+    
+    [Parameter]
+    public int Id { get; set; }
+
+    public string ErrorMessages { get; set; } = string.Empty;
+    
+    public Product Product { get; set; } = new();
+
+    public List<Category> Categories { get; set; } = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            var product = await Context.Products
+                .Include(product => product.Category)
+                .FirstOrDefaultAsync(product => product.Id == Id);
+
+            Product = product ?? throw new ArgumentNullException("Produto não encontrado");
+            Product.CategoryId = product.CategoryId;
+            
+            Categories = await Context.Categories.AsNoTracking().ToListAsync();
+        }
+        catch (ArgumentNullException ex)
+        {
+            ErrorMessages += ex.Message;
+        }
+        
+    }
+
+    public async Task Submit()
+    {
+        try
+        {
+            Context.Products.Remove(Product);
+            await Context.SaveChangesAsync();
+            Navigator.NavigateTo("/products");
+        }
+        catch (Exception ex)
+        {
+            Navigator.NavigateTo("/Error");
+        }
+    }
+    
+}

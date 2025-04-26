@@ -1,0 +1,43 @@
+@page "/products"
+@using Shop.Models
+
+<h1>Products</h1>
+
+<a href="products/create" class="btn btn-primary">
+    <i class="oi oi-plus"> </i>
+    New Product
+</a>
+
+<table class="table">
+    <thead>
+    <th>Id</th>
+    <th>Descrição</th>
+    <th>Price</th>
+    <th>Editar</th>
+    <th>Deletar</th>
+    </thead>
+    <tbody>
+    @foreach (var product in Products)
+    {
+        <tr>
+            <td>@product.Id</td>
+            <td>@product.Description</td>
+            <td>@product.Price</td>
+            <td><a href="products/update/@product.Id"><i class="oi oi-pencil"></i></a></td>
+            <td><a href="products/delete/@product.Id"><i class="oi oi-delete"></i></a></td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+
+@code {
+
+    public List<Product> Products { get; set; } = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        Products.AddRange(await Context.Products.AsNoTracking().ToListAsync());
+    }
+
+}

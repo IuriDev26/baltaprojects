@@ -1,0 +1,63 @@
+@page "/categories/delete/{id:int}"
+<h1>Update</h1>
+
+<EditForm Model="@Category" OnValidSubmit="Submit">
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
+    
+    @if (!string.IsNullOrEmpty(ErrorMessages))
+    {
+        <div class="alert alert-danger">@ErrorMessages</div>
+    }
+
+    <div class="mb-3">
+        <label for="Description" class="form-label">Description</label>
+        <InputText readonly @bind-Value="@Category.Name" class="form-control" id="Description"></InputText>
+    </div>
+
+
+    <button class="btn btn-danger" type="submit">Delete</button>
+
+</EditForm>
+
+@code {
+    
+    [Parameter]
+    public int Id { get; set; }
+
+    public string ErrorMessages { get; set; } = string.Empty;
+    
+    public Category Category { get; set; } = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            var category = await Context.Categories
+                .FirstOrDefaultAsync(category => category.Id == Id);
+
+            Category = category ?? throw new ArgumentNullException("Categoria não encontrado");
+            
+        }
+        catch (ArgumentNullException ex)
+        {
+            ErrorMessages += ex.Message;
+        }
+        
+    }
+
+    public async Task Submit()
+    {
+        try
+        {
+            Context.Categories.Remove(Category);
+            await Context.SaveChangesAsync();
+            Navigator.NavigateTo("/categories");
+        }
+        catch (Exception ex)
+        {
+            Navigator.NavigateTo("/Error");
+        }
+    }
+    
+}

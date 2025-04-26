@@ -1,0 +1,39 @@
+@page "/categories/create"
+@using Microsoft.EntityFrameworkCore
+@using Shop.Data
+@using Shop.Models
+@inject AppDbContext Context
+@inject NavigationManager Navigator
+<h1>New Category</h1>
+
+<EditForm Model="@Category" OnValidSubmit="Submit">
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
+
+    <div class="mb-3">
+        <label for="Description" class="form-label">Description</label>
+        <InputText @bind-Value="@Category.Name" class="form-control" id="Description"></InputText>
+    </div>
+    
+    <button class="btn btn-success" type="submit">Save</button>
+
+</EditForm>
+
+
+@code {
+    public Category Category { get; set; } = new();
+    
+    public async Task Submit()
+    {
+        try
+        {
+            await Context.Categories.AddAsync(Category);
+            await Context.SaveChangesAsync();
+            Navigator.NavigateTo("/categories");
+        }
+        catch (Exception ex)
+        {
+            Navigator.NavigateTo("/Error");
+        }
+    }
+}

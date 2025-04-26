@@ -1,0 +1,79 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Shop
+build_property.RootNamespace = Shop
+build_property.ProjectDir = /home/iuridev26/Development/Learning/.NET/baltaprojects/Shop/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /home/iuridev26/Development/Learning/.NET/baltaprojects/Shop
+build_property._RazorSourceGeneratorDebug = 
+
+[/home/iuridev26/Development/Learning/.NET/baltaprojects/Shop/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/iuridev26/Development/Learning/.NET/baltaprojects/Shop/Pages/Categories/Create.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2F0ZWdvcmllcy9DcmVhdGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/iuridev26/Development/Learning/.NET/baltaprojects/Shop/Pages/Categories/Delete.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2F0ZWdvcmllcy9EZWxldGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/iuridev26/Development/Learning/.NET/baltaprojects/Shop/Pages/Categories/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2F0ZWdvcmllcy9JbmRleC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/iuridev26/Development/Learning/.NET/baltaprojects/Shop/Pages/Categories/Update.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2F0ZWdvcmllcy9VcGRhdGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/iuridev26/Development/Learning/.NET/baltaprojects/Shop/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/iuridev26/Development/Learning/.NET/baltaprojects/Shop/Pages/Products/Create.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJvZHVjdHMvQ3JlYXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/iuridev26/Development/Learning/.NET/baltaprojects/Shop/Pages/Products/Delete.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJvZHVjdHMvRGVsZXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/iuridev26/Development/Learning/.NET/baltaprojects/Shop/Pages/Products/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJvZHVjdHMvSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/iuridev26/Development/Learning/.NET/baltaprojects/Shop/Pages/Products/Update.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJvZHVjdHMvVXBkYXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/iuridev26/Development/Learning/.NET/baltaprojects/Shop/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/iuridev26/Development/Learning/.NET/baltaprojects/Shop/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL01haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-bf7dtjve0s
+
+[/home/iuridev26/Development/Learning/.NET/baltaprojects/Shop/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL05hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-guiv6ob1es
+
+[/home/iuridev26/Development/Learning/.NET/baltaprojects/Shop/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/iuridev26/Development/Learning/.NET/baltaprojects/Shop/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
