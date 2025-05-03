@@ -1,0 +1,50 @@
+@page "/categories/create"
+@using BlazorShop.Data
+@using BlazorShop.Models
+@rendermode InteractiveServer
+@inject ApplicationDbContext Context
+@inject NavigationManager Navigator
+
+<h1>Create</h1>
+
+<EditForm Model="@Category" FormName="CreateCategory" OnValidSubmit="SubmitAsync">
+    
+    <DataAnnotationsValidator/>
+    
+    @if (!string.IsNullOrEmpty(ErrorMessages))
+    {
+        <div class="mb-3">
+            @ErrorMessages
+        </div>
+    }
+    
+    <div class="mb-3">
+        <label for="Title" class="form-label">Title</label>
+        <InputText class="form-control" id="Title" @bind-Value="Category.Title"/>
+        <ValidationMessage For="@( () => Category.Title )"/>
+    </div>
+    
+    <button class="btn btn-primary">Save</button>
+    <button class="btn btn-danger">Cancel</button>
+    
+</EditForm>
+
+@code {
+    public Category Category { get; set; } = new();
+
+    public string ErrorMessages { get; set; } = string.Empty;
+
+    public async Task SubmitAsync()
+    {
+        try
+        {
+            await Context.Categories.AddAsync(Category);
+            await Context.SaveChangesAsync();
+            Navigator.NavigateTo("/categories");
+        }
+        catch (Exception ex)
+        {
+            ErrorMessages = ex.Message;
+        }
+    }
+}

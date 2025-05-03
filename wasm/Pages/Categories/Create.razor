@@ -1,0 +1,53 @@
+@page "/categories/create"
+@using Model
+@using RestSharp
+@inject RestClient Client
+
+<h1>New Category</h1>
+
+
+
+@if (!string.IsNullOrEmpty(ErrorMessages))
+{
+    <div class="alert alert-danger">@ErrorMessages</div> 
+}
+
+@if (Success)
+{
+    <div class="alert alert-success">@ErrorMessages</div> 
+}
+
+<div class="mb-3">
+    <label for="Name" class="form-label">Name</label>
+    <input type="text" class="form-control" id="Name" @bind="Category.Name">
+</div>
+
+<button class="btn btn-success" @onclick="CreateCategory">Save</button>
+
+
+@code {
+
+    public Category Category { get; set; } = new();
+
+    public bool Success { get; set; }
+    public string ErrorMessages { get; set; } = string.Empty;
+
+    public async Task CreateCategory()
+    {
+        try
+        {
+            var request = new RestRequest("http://localhost:5124/v1/categories")
+                .AddJsonBody(Category);
+            var response = await Client.PostAsync<Category>(request);
+
+            Success = response is not null;
+            if (!Success)
+                throw new Exception("Error while creating this category");
+        }
+        catch (Exception ex)
+        {
+            ErrorMessages = ex.Message;
+        }
+    }
+
+}

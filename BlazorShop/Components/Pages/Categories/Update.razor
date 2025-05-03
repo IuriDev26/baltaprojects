@@ -1,0 +1,63 @@
+@page "/categories/update/{id:int}"
+@using BlazorShop.Data
+@using BlazorShop.Models
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.EntityFrameworkCore
+@inject ApplicationDbContext Context
+@inject NavigationManager Navigator
+@rendermode InteractiveServer
+@attribute [Authorize]
+
+<h1>Update Category</h1>
+
+<EditForm Model="@Category" FormName="UpdateCategory" OnValidSubmit="SubmitAsync">
+
+    <DataAnnotationsValidator/>
+
+    @if (!string.IsNullOrEmpty(ErrorMessages))
+    {
+        <div class="mb-3 alert alert-danger">
+            @ErrorMessages
+        </div>
+    }
+
+    <div class="mb-3">
+        <label for="Title" class="form-label">Title</label>
+        <InputText class="form-control" id="Title" @bind-Value="Category.Title"/>
+        <ValidationMessage For="@( () => Category.Title )"/>
+    </div>
+
+    <button class="btn btn-primary" type="submit">Save</button>
+    <a href="/categories" class="btn btn-danger">Cancel</a>
+
+</EditForm>
+
+@code {
+    
+    [Parameter]
+    public int Id { get; set; }
+
+    public string ErrorMessages { get; set; } = string.Empty;
+
+    public Category Category { get; set; } = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        Category = await Context.Categories.FirstOrDefaultAsync(x => x.Id == Id) ?? new();
+    }
+
+    public async Task SubmitAsync()
+    {
+        try
+        {
+            Context.Categories.Update(Category);
+            await Context.SaveChangesAsync();
+            Navigator.NavigateTo("/categories");
+        }
+        catch (Exception ex)
+        {
+            ErrorMessages = ex.Message;
+        }
+    }
+
+}

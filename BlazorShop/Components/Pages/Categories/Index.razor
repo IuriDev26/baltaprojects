@@ -1,0 +1,55 @@
+@page "/categories"
+@using BlazorShop.Data
+@using BlazorShop.Models
+@using Microsoft.EntityFrameworkCore
+@inject ApplicationDbContext Context
+@rendermode InteractiveServer
+@attribute [StreamRendering(true)]
+
+<h1>Categories</h1>
+
+<div class="mb-3">
+    <a href="/categories/create" class="btn btn-success">New Category</a>
+</div>
+
+@if (!Categories.Any())
+{
+    <div class="text-center">
+        Loading categories...
+    </div>
+}
+else
+{
+    <table class="table">
+        <thead>
+        <th>Id</th>
+        <th>Category</th>
+        <th>Update</th>
+        <th>Delete</th>
+        </thead>
+        <tbody>
+        @foreach (var category in Categories)
+        {
+            <tr>
+                <td>@category.Id</td>
+                <td>@category.Title</td>
+                <td><a href="/categories/update/@category.Id" class="btn btn-primary">Update</a></td>
+                <td><a href="/categories/delete/@category.Id" class="btn btn-danger">Delete</a></td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+
+
+@code {
+
+    public List<Category> Categories { get; set; } = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        Categories = await Context.Categories.AsNoTracking().ToListAsync();
+    }
+
+}
